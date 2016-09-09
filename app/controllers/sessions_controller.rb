@@ -3,17 +3,17 @@ class SessionsController < ApplicationController
   end
 
   def create
-    @user = User.create(user_params)
-    if @user.valid?
-      login(@user)
-      flash[:notice] = "Logged In"
+    user = User.find_by_email(params[:email])
+    if user && user.authenticate(params[:password])
+      session[:user_id] = user.id
+      redirect_to '/'
     else
-      flash[:error] = "Failed to log in"
+      redirect_to '/'
     end
   end
 
-  def show
-    @user = User.find_by_id(params[:id])
+  def destroy
+    session[:user_id] = nil
+    redirect_to '/login'
   end
-
 end
