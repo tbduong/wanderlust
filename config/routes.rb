@@ -10,4 +10,5 @@ Rails.application.routes.draw do
   post '/login', to: 'sessions#create'
 
   get '/feed', to: 'posts#index', as: 'posts'
+  get '/posts/new', to: 'posts#new', as: 'post'
 end
