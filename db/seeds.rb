@@ -19,5 +19,13 @@ POSTS = [
     }
 ]
 
+LOCATIONS = [
+  {
+      city: "Santiago",
+      country: "Chile"
+  }
+]
+
 p User.create(USERS)
 p Post.create(POSTS)
+p Location.create(LOCATIONS)
