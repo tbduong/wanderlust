@@ -2,6 +2,9 @@
 
 <%= form_for @post do |post| %>
   <div>
+    <h3><%= post.text_field :title, placeholder: "Title your adventure...",  class: "form-field"%></h3>
+  </div>
+  <div>
     <h3><%= post.text_area :text, placeholder: "Share your experience!....",  class: "form-field"%></h3>
   </div>
   <div>

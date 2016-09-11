@@ -20,8 +20,8 @@
     <div class="top-bar-left">
       <ul class="dropdown menu" data-dropdown-menu>
         <li class="menu-text">WanderLust</li>
-        <li><a href="#">Feed</a></li>
-        <li><a href="#"> New Post</a></li>
+        <li> <%= link_to 'Global Feed', posts_path %></li>
+        <li> <%= link_to 'New Post', new_post_path %></li>
       </ul>
     </div>
     <div class="top-bar-right">
@@ -32,6 +32,9 @@
     </div>
   </div>
 
+  <% flash.each do |m| %>
+    <%= m %>
+  <% end %>
   <%= yield %>
 
 </body>

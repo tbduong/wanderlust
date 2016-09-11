@@ -26,11 +26,11 @@ ActiveRecord::Schema.define(version: 20160909230249) do
     t.string   "image"
     t.text     "text"
     t.string   "tag"
+    t.string   "title"
     t.integer  "location_id"
     t.integer  "user_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
-    t.string   "title"
   end
 
   create_table "taggings", force: :cascade do |t|
