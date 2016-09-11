@@ -10,6 +10,9 @@
   <div>
     <h3><%= post.text_field :image, placeholder: "Upload Image Here", class: "form-field" %></h3>
   </div>
+  <div>
+    <h3><%= post.text_field :location_id, placeholder: "Location", class: "form-field" %></h3>
+  </div>
 
   <%= post.submit "Create Post", :class => "btn signup" %>
 <% end %>

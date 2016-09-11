@@ -10,13 +10,10 @@ class PostsController < ApplicationController
   end
 
   def create
-    location = Location.find_by_id(params[:id])
-    post = Post.new(post_params)
-    id = current_user[:id]
-    post[:user_id] = id
-    if post.save
+    @post = Post.new(post_params)
+    current_user.posts << @post
+    if @post.save
       flash[:success] = "Awesome! Successfully saved a post"
-      location.posts.append(post)
       redirect_to posts_path
     else
       flash[:error] = "Could not post your entry"
@@ -33,7 +30,7 @@ class PostsController < ApplicationController
 
   private
   def post_params
-   params.require(:post).permit(:title, :text, :image)
+   params.require(:post).permit(:title, :text, :image, :location_id)
   end
 
 end
