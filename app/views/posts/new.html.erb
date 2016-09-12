@@ -1,6 +1,7 @@
-<h1> Create a new Post </h1>
+<h1 class="text-center"> Create a new Post </h1>
 
-<%= form_for @post do |post| %>
+<div class="large-7 callout large-centered">
+  <%= form_for @post do |post| %>
   <div>
     <h3><%= post.text_field :title, placeholder: "Title your adventure...",  class: "form-field"%></h3>
   </div>
@@ -14,5 +15,6 @@
     <h3><%= post.text_field :location_id, placeholder: "Location", class: "form-field" %></h3>
   </div>
 
-  <%= post.submit "Create Post", :class => "btn signup" %>
-<% end %>
+  <%= post.submit "Create Post", :class => "button signup hollow" %>
+  <% end %>
+</div>

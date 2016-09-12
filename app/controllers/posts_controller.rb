@@ -46,10 +46,25 @@ class PostsController < ApplicationController
     end
   end
 
+  def destroy
+    set_post
+    p @post.inspect
+    if @post.destroy
+      flash[:success] = "You have successfully deleted your post."
+      redirect_to posts_path
+    else
+      flash[:error] = "You may only delete your own posts."
+    end
+  end
+
 
   private
   def post_params
-   params.require(:post).permit(:title, :text, :image, :location_id, :user_id)
+   params.require(:post).permit(:title, :text, :image, :location_id)
+  end
+
+  def set_post
+    @post = Post.find(params[:id])
   end
 
 end
