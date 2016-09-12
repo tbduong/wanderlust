@@ -5,27 +5,3 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-USERS = [
-  {
-    first_name: "David",
-    last_name: "Kim"
-  }
-]
-
-POSTS = [
-    {
-        text: "gjgkejgkejgeljgakejge",
-        user_id: 1
-    }
-]
-
-LOCATIONS = [
-  {
-      city: "Santiago",
-      country: "Chile"
-  }
-]
-
-p User.create(USERS)
-p Post.create(POSTS)
-p Location.create(LOCATIONS)
