@@ -5,9 +5,9 @@
     <%= link_to 'Edit Post', edit_post_path(@post), class:'button hollow' %>
     <%= link_to 'Delete', destroy_post_path, method: :delete, class:'button hollow' %>
     <p>
-      Posted: <%= @post.created_at %> by <%= @post.user_id %>
+      Posted: <%= @post.created_at %> by <%= link_to "#{@post.user.first_name} #{@post.user.last_name}", user_path(current_user) %>
     </p>
-    <img src=" <%= @post.image %>" class="" alt="">
+    <img src= "<%= @post.image %>">
     <p> <%= @post.text %></p>
   </div>
 

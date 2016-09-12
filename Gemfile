@@ -30,6 +30,8 @@ gem 'bcrypt', '~> 3.1.7'
 #gem for foundation-rails
 gem 'foundation-rails'
 # Use Capistrano for deployment
+#UPLOADCARE
+gem 'uploadcare-rails'
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do

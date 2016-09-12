@@ -9,12 +9,12 @@
     <h3><%= post.text_area :text, placeholder: "Share your experience!....",  class: "form-field"%></h3>
   </div>
   <div>
-    <h3><%= post.text_field :image, placeholder: "Upload Image Here", class: "form-field" %></h3>
+    <h5><%= post.uploadcare_uploader :image, :data => {:images_only => true, :crop => "500x500 minimum", :image_shrink => "500x500", :clearable => true }%>
+    </h5>
   </div>
   <div>
-    <h3><%= post.text_field :location_id, placeholder: "Location", class: "form-field" %></h3>
+    <h3><%= post.select :location_id, [[1],[2],[3], [4], [5], [6]] %></h3>
   </div>
-
   <%= post.submit "Create Post", :class => "button signup hollow" %>
   <% end %>
 </div>
