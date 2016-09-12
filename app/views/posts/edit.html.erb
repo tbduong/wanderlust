@@ -1,0 +1,18 @@
+<h1> Edit this Post </h1>
+
+<%= form_for @post do |post| %>
+  <div>
+    <h3><%= post.text_field :title, placeholder: "Title your adventure...",  class: "form-field"%></h3>
+  </div>
+  <div>
+    <h3><%= post.text_area :text, placeholder: "Share your experience!....",  class: "form-field"%></h3>
+  </div>
+  <div>
+    <h3><%= post.text_field :image, placeholder: "Upload Image Here", class: "form-field" %></h3>
+  </div>
+  <div>
+    <h3><%= post.text_field :location_id, placeholder: "Location", class: "form-field" %></h3>
+  </div>
+
+  <%= post.submit "Create Post", :class => "btn signup" %>
+<% end %>

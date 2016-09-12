@@ -28,6 +28,17 @@ class PostsController < ApplicationController
     @location = Location.find_by(id: location_id)
   end
 
+  def edit
+    post_id = params[:id]
+    @post = Post.find_by(id: post_id)
+    location_id = params[:location_id]
+    @location = Location.find_by(id: location_id)
+  end
+
+  def update 
+  end
+
+
   private
   def post_params
    params.require(:post).permit(:title, :text, :image, :location_id)
