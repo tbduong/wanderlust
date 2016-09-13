@@ -46,9 +46,11 @@
     </div>
   </div>
 
+<div class="flash text-center">
   <% flash.each do |type, m| %>
-    <%= m %>
+  <%= m %>
   <% end %>
+</div>
   <%= yield %>
 
 </body>

@@ -1,0 +1,16 @@
+<h1> Edit User Information</h1>
+
+<%= form_for @user do |user| %>
+  <div>
+    <h3><%= user.text_field :first_name, placeholder: "First Name", class: "form-field"%></h3>
+  </div>
+  <div>
+    <h3><%= user.text_field :last_name, placeholder: "Last Name",  class: "form-field"%></h3>
+  </div>
+  <div>
+    <h5><%= user.uploadcare_uploader :pf_img, :data => {:images_only => true, :crop => "500x500 minimum", :image_shrink => "500x500", :clearable => true }%>
+    </h5>
+  </div>
+
+  <%= user.submit "Sign Up", :class => "button signup hollow" %>
+<% end %>
