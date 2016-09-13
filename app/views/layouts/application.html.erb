@@ -46,9 +46,14 @@
     </div>
   </div>
 
-  <% flash.each do |type, m| %>
+    <% flash.each do |type, m| %>
+<div class="success callout" data-closable>
     <%= m %>
-  <% end %>
+  <button class="close-button" aria-label="Dismiss alert" type="button" data-close>
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<% end %>
   <%= yield %>
 
 </body>
