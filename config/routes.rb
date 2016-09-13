@@ -19,4 +19,10 @@ Rails.application.routes.draw do
   patch 'users/posts/:id', to: 'posts#update'
   delete 'users/posts/:id', to: 'posts#destroy', as: 'destroy_post'
 
+  resources :posts do
+  member do
+    put "like", to: "posts#upvote"
+  end
+end
+
 end

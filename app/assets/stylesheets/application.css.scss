@@ -13,22 +13,20 @@
  *= require_tree .
  *= require_self
  *= require foundation_and_overrides
-
+ @import 'foundation-icons';
  */
-h1 h2 h3 h4 h5 p {
-    font-family: verdana;
-}
 
 .top-bar { background-color: #000000 !important;  }
 .top-bar-left a li ul { background-color: #000000 !important;  }
 .top-bar-right a { background-color: #000000 !important;  }
 .dropdown-menu a li ul { background-color: #000000 !important;  }
-.menu-text { background-color: #000000 !important;  }
+.menu-text { background-color: #000000 !important;
+color: rgba(46, 138, 119, 1);  }
 
 .top-bar li {
     a {
         &:hover {
-            color: red;
+            color: #ffffff;
         }
     }
 }
@@ -37,6 +35,19 @@ h1 h2 h3 h4 h5 p {
     margin-left: 20%;
 }
 
+.form-title {
+    color: rgba(46, 138, 119, 1);
+    font-weight: bold;
+}
+
 .callout {
     box-shadow: 3px 3px 3px black;
+}
+
+a {
+    color: rgba(46, 138, 119, 1);
+}
+
+.button {
+background-color: black;
 }

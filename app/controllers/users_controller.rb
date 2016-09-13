@@ -11,7 +11,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       session[:user_id] = @user.id
-      flash[:success] = "Welcome to WanderLust! Begin sharing your experiences of the world.."
+      flash[:success] = "Welcome to WanderLust! Begin sharing your experiences of the world..."
       redirect_to posts_path
     else
       flash[:error] = @user.errors.full_messages.join(", ")
@@ -40,7 +40,7 @@ class UsersController < ApplicationController
       flash[:notice] = "Successfully updated your profile."
       redirect_to user_path(@user)
     else
-      flash[:error] = "Was unable to save your profile information"
+      flash[:error] = "We were unable to save your profile information"
       redirect_to edit_user_path(@user)
     end
   end

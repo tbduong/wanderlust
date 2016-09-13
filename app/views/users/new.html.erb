@@ -1,8 +1,8 @@
-<div class="large-8 columns text-center">
+<br>
+<div class="large-6 large-centered text-center">
   <div class="callout form-box">
 
-    <h1> Sign Up </h1>
-
+    <h1 class="form-title"> Sign Up </h1>
     <%= form_for @user do |user| %>
     <div>
       <h3><%= user.text_field :first_name, placeholder: "First Name", class: "form-field"%></h3>
@@ -20,8 +20,8 @@
         <h5><%= user.uploadcare_uploader :pf_img, :data => {:images_only => true, :crop => "500x500 minimum", :image_shrink => "500x500", :clearable => true }%>
         </h5>
       </div>
-
       <%= user.submit "Sign Up", :class => "button hollow" %>
       <% end %>
+
     </div>
     </div>

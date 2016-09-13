@@ -23,6 +23,10 @@
       Posted by: <%= link_to "#{post.user.first_name} #{post.user.last_name}", user_path(current_user) %> on <%= post.created_at%>
     </p>
   </div>
+  <%= link_to like_post_path([post]), method: :put do %>
+  <i class="fi-heart"></i>
+  <%= post.get_upvotes.size %>
   </div>
+  <% end %>
   <% end %>
 </div>

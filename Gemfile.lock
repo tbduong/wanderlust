@@ -51,6 +51,7 @@ GEM
       tzinfo (~> 1.1)
     acts-as-taggable-on (4.0.0)
       activerecord (>= 4.0)
+    acts_as_votable (0.10.0)
     arel (7.1.1)
     babel-source (5.8.35)
     babel-transpiler (0.7.0)
@@ -75,6 +76,9 @@ GEM
     faraday_middleware (0.10.0)
       faraday (>= 0.7.4, < 0.10)
     ffi (1.9.14)
+    foundation-icons-sass-rails (3.0.0)
+      railties (>= 3.1.1)
+      sass-rails (>= 3.1.1)
     foundation-rails (6.2.3.0)
       railties (>= 3.1.0)
       sass (>= 3.3.0, < 3.5)
@@ -202,9 +206,11 @@ PLATFORMS
 
 DEPENDENCIES
   acts-as-taggable-on (~> 4.0)
+  acts_as_votable (~> 0.10.0)
   bcrypt (~> 3.1.7)
   byebug
   coffee-rails (~> 4.2)
+  foundation-icons-sass-rails
   foundation-rails
   jbuilder (~> 2.5)
   jquery-rails

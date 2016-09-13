@@ -2,7 +2,7 @@ class PostsController < ApplicationController
   def index
     @q = Post.ransack(params[:q])
     @search = @q.result(distinct: true)
-    @posts = Post.all
+    @posts = Post.all.order(:cached_votes_score => :desc)
     @user = User.find_by_id(params[:id])
   end
 
@@ -63,6 +63,13 @@ class PostsController < ApplicationController
     else
       flash[:error] = "You may only delete your own posts."
     end
+  end
+
+  #upvote_from user
+  def upvote
+    set_post
+    @post.upvote_from current_user
+    redirect_to posts_path
   end
 
 
