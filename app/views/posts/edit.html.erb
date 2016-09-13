@@ -11,6 +11,9 @@
     <h3><%= post.select :location_id, [[1],[2],[3], [4], [5], [6]] %></h3>
   </div>
   <div>
+    <h3><%= post.text_area :tag_list, placeholder: "tags.",  class: "form-field"%></h3>
+  </div>
+  <div>
     <h3><%= post.uploadcare_uploader :image, :data => {:images_only => true, :crop => "500x500 minimum", :image_shrink => "500x500", :clearable => true } %>
     </h3>
   </div>
