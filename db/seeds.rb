@@ -61,6 +61,14 @@ LOCATIONS = [
    {
        city: "Buenos Aires",
        country: "Argentina"
+   },
+   {
+       city: "Rome",
+       country: "Italy"
+   },
+   {
+       city: "Florence",
+       country: "Italy"
    }
  ]
 
