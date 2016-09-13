@@ -23,6 +23,27 @@ class UsersController < ApplicationController
     @post = Post.find_by(id: user_id)
   end
 
+  def edit
+    @user = User.find_by_id(params[:id])
+    if session[:user_id] != @user[:id]
+      flash[:error] = "You are NOT authorized to edit this profile."
+      redirect_to '/'
+    end
+  end
+
+  def update
+    @user = User.find_by_id(params[:id])
+    if session[:user_id] == @user[:id]
+      @user.update(user_params)
+      flash[:notice] = "Successfully updated your profile."
+      redirect_to user_path(@user)
+    else
+      flash[:error] = "Was unable to save your profile information"
+      redirect_to edit_user_path(@user)
+    end
+  end
+
+
   private
 
   def user_params
