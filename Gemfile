@@ -34,6 +34,8 @@ gem 'foundation-rails'
 gem 'uploadcare-rails'
 #Ransack gem
 gem 'ransack', github: 'activerecord-hackery/ransack'
+#acts_as_votable
+gem 'acts_as_votable', '~> 0.10.0'
 
 # gem 'capistrano-rails', group: :development
 

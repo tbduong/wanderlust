@@ -65,6 +65,13 @@ class PostsController < ApplicationController
     end
   end
 
+  #upvote_from user
+  def upvote
+    set_post
+    @post.upvote_from current_user
+    redirect_to posts_path
+  end
+
 
   private
   def post_params
