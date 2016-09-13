@@ -21,7 +21,7 @@ Rails.application.routes.draw do
 
   resources :posts do
   member do
-    put "like", to: "links#upvote"
+    put "like", to: "posts#upvote"
   end
 end
 
