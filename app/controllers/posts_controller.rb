@@ -3,6 +3,7 @@ class PostsController < ApplicationController
     @q = Post.ransack(params[:q])
     @search = @q.result(distinct: true)
     @posts = Post.all
+    @user = User.find_by_id(params[:id])
   end
 
   def new
@@ -18,7 +19,7 @@ class PostsController < ApplicationController
       flash[:success] = "Awesome! Successfully saved a post"
       redirect_to posts_path
     else
-      flash[:error] = "Could not post your entry"
+      flash[:error] = "Could not post your entry."
       redirect_to '/'
     end
   end
@@ -31,6 +32,10 @@ class PostsController < ApplicationController
   def edit
     post_id = params[:id]
     @post = Post.find_by(id: post_id)
+    if session[:user_id] != @post.user_id
+      flash[:error] = "You are not allowed to edit this post. It's not yours!"
+      redirect_to '/'
+    end
   end
 
   def update
@@ -51,7 +56,8 @@ class PostsController < ApplicationController
   def destroy
     set_post
     p @post.inspect
-    if @post.destroy
+    if session[:user_id] == @post.user_id
+      @post.destroy
       flash[:success] = "You have successfully deleted your post."
       redirect_to posts_path
     else

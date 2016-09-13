@@ -3,8 +3,7 @@
 </div>
 <img src=" <%= @user.pf_img %>" class="pf-img">
 <br>
-<%= link_to "Edit Profile Info", edit_user_path(@user), class:"button hollow edit" %>
-
+  <%= link_to "Edit Profile Info", edit_user_path(@user), class:"button hollow edit" %>
 <div class="row small-up-1 medium-up-2 large-up-3">
   <% current_user.posts.each do |post| %>
   <div class="column">
