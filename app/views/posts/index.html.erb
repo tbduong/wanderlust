@@ -13,15 +13,16 @@
 
   <% @search.each do |post|%>
   <div class="column">
-    <img src=" <%= post.image %>" class="thumbnail" alt="">
+    <div class="callout">
+
     <h4 class="text-center"> <%= link_to "#{post.title}", post_path(post) %></h4>
-    <p>
-      <%= link_to "#{post.user.first_name} #{post.user.last_name}", user_path(current_user) %>
-    </p>
+    <p class="text-center"><%= post.location_id %></p>
+    <img src=" <%= post.image %>" class="thumbnail">
     <p class="body-text"> <%= post.text %></p>
     <p>
-      <%= post.location_id %>
+      Posted by: <%= link_to "#{post.user.first_name} #{post.user.last_name}", user_path(current_user) %> on <%= post.created_at%>
     </p>
+  </div>
   </div>
   <% end %>
 </div>
