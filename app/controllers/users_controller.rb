@@ -18,7 +18,9 @@ class UsersController < ApplicationController
   end
 
   def show
+    user_id = params[:id]
     @user = User.find_by_id(params[:id])
+    @post = Post.find_by(id: user_id)
   end
 
   private

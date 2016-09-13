@@ -1,13 +1,27 @@
 <h1 class="text-center"> Global Feed </h1>
- <div class="row small-up-1 medium-up-2 large-up-3">
-   <% @posts.each do |post|%>
-   <div class="column">
-     <img src=" <%= post.image %>" class="thumbnail" alt="">
-     <h4 class="text-center"> <%= link_to "#{post.title}", post_path(post) %></h4>
-     <p>
-       <%= link_to "#{post.user.first_name} #{post.user.last_name}", user_path(current_user) %>
-     </p>
-     <p class="body-text"> <%= post.text %></p>
-   </div>
-   <% end %>
- </div>
+<div class="large-7 columns">
+  <%= search_form_for @q do |f| %>
+    <div class="field">
+      <label for="">Search</label>
+      <%= f.text_field :title %>
+    </div>
+    <%= f.submit "Search", class:"button hollow" %>
+  <% end %>
+</div>
+
+  <div class="row small-up-1 medium-up-2 large-up-3">
+
+  <% @search.each do |post|%>
+  <div class="column">
+    <img src=" <%= post.image %>" class="thumbnail" alt="">
+    <h4 class="text-center"> <%= link_to "#{post.title}", post_path(post) %></h4>
+    <p>
+      <%= link_to "#{post.user.first_name} #{post.user.last_name}", user_path(current_user) %>
+    </p>
+    <p class="body-text"> <%= post.text %></p>
+    <p>
+      <%= post.location_id %>
+    </p>
+  </div>
+  <% end %>
+</div>

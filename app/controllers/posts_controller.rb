@@ -1,11 +1,12 @@
 class PostsController < ApplicationController
   def index
-    @post = Post.find_by_id(params[:id])
+    @q = Post.ransack(params[:q])
+    @search = @q.result(distinct: true)
     @posts = Post.all
   end
 
   def new
-    @location = Location.find_by_id(params[:id])
+    @locations = Location.all
     @post = Post.new
     render :new
   end
