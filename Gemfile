@@ -32,6 +32,9 @@ gem 'foundation-rails'
 # Use Capistrano for deployment
 #UPLOADCARE
 gem 'uploadcare-rails'
+#Ransack gem
+gem 'ransack', github: 'activerecord-hackery/ransack'
+
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
