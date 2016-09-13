@@ -23,6 +23,12 @@
     position: absolute;
   }
 
-.edit-btn {
+.edit {
     margin-left: 45%;
+    position: relative;
+    z-index: 1;
+}
+
+.success {
+    z-index: 2;
 }
