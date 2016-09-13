@@ -1,6 +1,6 @@
 <h1 class="text-center"> Create a new Post </h1>
 
-<div class="large-7 callout large-centered">
+<div class="large-6 large-centered callout">
   <%= form_for @post do |post| %>
   <div>
     <h3><%= post.text_field :title, placeholder: "Title your adventure...",  class: "form-field"%></h3>
@@ -9,7 +9,7 @@
     <h3><%= post.text_area :text, placeholder: "Share your experience!....",  class: "form-field"%></h3>
   </div>
   <div>
-    <h3><%= post.select :location_id, @locations.map {|l| l.id} %></h3>
+    <h3> <%= post.select :location_id, @locations.map {|l| l.id} %> </h3>
   </div>
   <div>
     <h5><%= post.uploadcare_uploader :image, :data => {:images_only => true, :crop => "500x500 minimum", :image_shrink => "500x500", :clearable => true }%>

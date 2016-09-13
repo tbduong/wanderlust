@@ -9,7 +9,8 @@ class SessionsController < ApplicationController
       flash[:notice] = 'Hello, Adventurer.'
       redirect_to user_path(current_user[:id])
     else
-      redirect_to '/'
+      flash[:error] = "Unable to login. Try again."
+      redirect_to login_path
     end
   end
 
