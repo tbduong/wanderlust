@@ -23,7 +23,7 @@
     <button class="menu-icon" type="button" data-toggle></button>
     <div class="title-bar-title">Menu</div>
   </div>
-  <div class="top-bar" id="example-menu">
+  <div class="top-bar">
     <div class="top-bar-left">
       <ul class="dropdown menu" data-dropdown-menu>
         <li class="menu-text"> <%= link_to "WanderLust", root_path %> </li>
@@ -47,13 +47,13 @@
   </div>
 
     <% flash.each do |type, m| %>
-<div class="success callout" data-closable>
-    <%= m %>
-  <button class="close-button" aria-label="Dismiss alert" type="button" data-close>
-    <span aria-hidden="true">&times;</span>
-  </button>
-</div>
-<% end %>
+    <div class="success callout" data-closable>
+      <%= m %>
+      <button class="close-button" aria-label="Dismiss alert" type="button" data-close>
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <% end %>
   <%= yield %>
 
 </body>
