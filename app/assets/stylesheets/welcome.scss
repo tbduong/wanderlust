@@ -16,7 +16,7 @@
   .layer {
     position:absolute; left:0;
     width:100%;
-    height:25em;
+    height:1em;
     text-align:center;
     font-size:5em;
     font-weight:bold;
@@ -27,4 +27,8 @@
     font-weight: bolder;
     margin-top: 0.9em;
     font-size: 2em;
+}
+
+.section-gray {
+    background-color: #F6F6F6;
 }

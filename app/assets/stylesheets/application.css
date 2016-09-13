@@ -16,8 +16,23 @@
 
  */
 h1 h2 h3 h4 h5 p {
-    font-family: sans-serif;
+    font-family: verdana;
 }
 
 .top-bar { background-color: #000000 !important;  }
-.menu-text { background-color: transparent !important;  }
+.top-bar-left a li { background-color: #000000 !important;  }
+.top-bar-right a { background-color: #000000 !important;  }
+.dropdown-menu a li { background-color: #000000 !important;  }
+.menu-text { background-color: #000000 !important;  }
+
+.top-bar li {
+    a {
+        &:hover {
+            color: red;
+        }
+    }
+}
+
+.form-box {
+    margin-left: 20%;
+}
