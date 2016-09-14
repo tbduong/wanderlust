@@ -3,8 +3,8 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .pf-img {
   display: inline-block;
-  width: 150px;
-  height: 150px;
+  width: 9em;
+  height: 9em;
   border-radius: 50%;
   background-repeat: no-repeat;
   background-position: center center;
@@ -12,6 +12,20 @@
   margin-top: 2em;
   margin-left: 44%;
   position: relative;
+  border-style: solid;
+}
+
+.pf-thumb{
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+  border-style: solid;
+  z-index: 4;
 }
 
 .profile-area {
