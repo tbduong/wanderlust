@@ -76,8 +76,6 @@ GEM
     faraday_middleware (0.10.0)
       faraday (>= 0.7.4, < 0.10)
     ffi (1.9.14)
-    filterrific (2.0.5)
-      rails (>= 3.1.0)
     foundation-icons-sass-rails (3.0.0)
       railties (>= 3.1.1)
       sass-rails (>= 3.1.1)
@@ -214,7 +212,6 @@ DEPENDENCIES
   bcrypt (~> 3.1.7)
   byebug
   coffee-rails (~> 4.2)
-  filterrific
   foundation-icons-sass-rails
   foundation-rails
   gmaps4rails

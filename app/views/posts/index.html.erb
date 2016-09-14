@@ -1,10 +1,26 @@
 <b><h2 class="text-center"> Global Feed </h2></b>
-<div style='width: 800px;'>
-  <div id="map" style='width: 800px; height: 400px;'></div>
-</div>
+<!-- <div style='width: 800px;'>
+  <div id="map" style='width: 700px; height: 300px;'></div>
+</div> -->
+
+<%= search_form_for @q do |f| %>
+<div class="large-8 large-centered text-center">
+
+
+  <div class="field">
+      <label for="">Filter by Location and Category</label>
+      <%= f.select :location_cont, [
+        ["Austria"], ["Australia"], ["Belgium"], ["Brazil"], ["Chile"],["Croatia"],["France"],["Germany"],["Greece"],["Iceland"], ["India"], ["Italy"],["Spain"],["Thailand"], ["Vietnam"],["United Kingdom"],["USA"]
+        ] %>
+      <%= f.select :tag_list_cont, [["Art"], ["Backpacking"], ["Beach"], ["Camping"], ["City"], ["Food/Dining"],["Landscape"], ["Mountains"],["Museums"], ["Nature"], ["Nightlife"],["Resort"] ] %>
+  </div>
+  <%= f.submit "Filter", class:"button" %>
+  <% end %>
+  </div>
+
 
 <div class="row small-up-1 medium-up-2 large-up-3">
-  <% @posts.each do |post|%>
+  <% @search.each do |post|%>
   <div class="column user-feed">
     <div class="callout post-area">
 

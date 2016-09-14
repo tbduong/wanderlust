@@ -43,7 +43,7 @@ gem 'gmaps4rails'
 #underscorejs
 gem 'underscore-rails'
 #filterrific
-gem 'filterrific'
+# gem 'filterrific'
 
 # gem 'capistrano-rails', group: :development
 
