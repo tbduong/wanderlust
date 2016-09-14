@@ -1,6 +1,6 @@
 <b><h2 class="text-center"> Global Feed </h2></b>
 <div class="container-fluid">
-  <div class="row" id="map" style='width:800px; height: 300px;'></div>
+  <div class="row" id="map" style='width:870px; height: 300px;'></div>
   <script type="text/javascript">
   handler = Gmaps.build('Google');
   handler.buildMap({
@@ -23,14 +23,16 @@
 <div class="form-field large-9 large-centered">
   <h4 class="text-center"> Filter through photoblogs:</h4>
   <%= search_form_for @q do |f| %>
-  <div class="large-8 large-centered text-center">
+  <div class="large-6 large-centered text-center">
     <div class="field">
       <p><%= f.label :location, "Location:" %></p>
-      <%= f.select :location, [
+      <%= f.select :location_cont, [
         ["Austria"], ["Australia"], ["Belgium"], ["Brazil"], ["Chile"],["Croatia"],["France"],["Germany"],["Greece"],["Iceland"], ["India"], ["Italy"],["Spain"],["Thailand"], ["Vietnam"],["United Kingdom"],["USA"]
-        ] %>
-        <p><%= f.label :tag_list_cont, "By Category:" %></p>
-        <%= f.select :tag_list_cont, [["Art"], ["Backpacking"], ["Beach"], ["Camping"], ["City"], ["Food/Dining"],["Landscape"], ["Mountains"],["Museums"], ["Nature"], ["Nightlife"],["Resort"] ] %>
+        ], :include_blank => true, :prompt => "Filter by Location" %>
+
+        
+        <p><%= f.label :tag_list, "By Category:" %></p>
+        <%= f.select :tag_list_cont, [["Art"], ["Backpacking"], ["Beach"], ["Camping"], ["City"], ["Food/Dining"],["Landscape"], ["Mountains"],["Museums"], ["Nature"], ["Nightlife"],["Resort"] ], :include_blank => true, :prompt => "Filter by Category" %>
         <%= f.submit "Filter", class:"button" %>
         <%= link_to "Refresh", :back %>
         <% end %>
