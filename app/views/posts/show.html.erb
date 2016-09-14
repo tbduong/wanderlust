@@ -8,8 +8,13 @@
       Posted: <%= @post.created_at %> by <%= link_to "#{@post.user.first_name} #{@post.user.last_name}", user_path(current_user) %>
     </p>
     <img src= "<%= @post.image %>">
+    <br>
+    <%= link_to like_post_path([@post]), method: :put do %>
+    <i class="fi-heart"></i>
+    <%= @post.get_upvotes.size %>
+    <% end %>
     <p> <%= @post.text %></p>
-    <p>
+    <p class="tag text-center">
       <%= @post.tag_list %>
     </p>
   </div>
