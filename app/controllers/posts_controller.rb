@@ -1,9 +1,13 @@
 class PostsController < ApplicationController
   def index
-    # @posts = Post.all.order(:cached_votes_score => :desc)
-    # @q = Post.ransack(params[:q])
-    # @search = @q.result(distinct: true)
-    @posts = Post.all
+    @q = Post.ransack(params[:q])
+    @search = @q.result(distinct: true)
+    @posts = Post.all.order(:created_at => :asc)
+    @user = User.find_by_id(params[:id])
+  end
+
+  def popular
+    @posts = Post.all.order(:cached_votes_score => :desc)
     @user = User.find_by_id(params[:id])
   end
 
@@ -70,13 +74,13 @@ class PostsController < ApplicationController
   def upvote
     set_post
     @post.upvote_from current_user
-    redirect_to posts_path
+    redirect_to :back
   end
 
 
   private
   def post_params
-   params.require(:post).permit(:title, :text, :image, :location_id, :tag_list)
+   params.require(:post).permit(:title, :text, :image, :location, :tag_list)
   end
 
   def set_post

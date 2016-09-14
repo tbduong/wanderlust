@@ -10,7 +10,9 @@
     <h3><%= post.text_area :text, placeholder: "Share your experience!....",  class: "form-field"%></h3>
   </div>
   <div>
-    <h3> <%= post.select :location_id, [[1]]%> </h3>
+    <h3><%= post.select :location, [
+      ["Austria"], ["Australia"], ["Belgium"], ["Brazil"], ["Chile"],["Croatia"],["France"],["Germany"],["Greece"],["Iceland"], ["India"], ["Italy"],["Spain"],["Thailand"], ["Vietnam"],["United Kingdom"],["USA"]
+      ] %> </h3>
   </div>
   <div>
     <h3><%= post.select :tag_list, [["Art"], ["Backpacking"], ["Beach"], ["Camping"], ["City"], ["Food/Dining"],["Landscape"], ["Mountains"],["Museums"], ["Nature"], ["Nightlife"],["Resort"] ]%></h3>
