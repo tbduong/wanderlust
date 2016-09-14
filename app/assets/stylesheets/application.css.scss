@@ -17,7 +17,6 @@
  @import 'foundation-icons';
 
 .top-bar { background-color: #000000 !important;
-          height:4em;
           font-size: 14px;}
 .top-bar-left a li ul { background-color: #000000 !important;  }
 .top-bar-right a { background-color: #000000 !important;  }
@@ -50,6 +49,9 @@ a {
     color: rgba(46, 138, 119, 1);
 }
 
+body {
+    background-color: #f1f1f1;
+}
 .button {
 background-color: black;
 }
