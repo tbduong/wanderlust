@@ -16,11 +16,13 @@
     <div>
       <h3><%= user.password_field :password, placeholder: "Password", class: "form-field" %>
       </div>
-      <div>
+      <!-- <div>
         <h5><%= user.uploadcare_uploader :pf_img, :data => {:images_only => true, :crop => "500x500 minimum", :image_shrink => "500x500", :clearable => true }%>
         </h5>
-      </div>
+      </div> -->
       <%= user.submit "Sign Up", :class => "button" %>
+      <hr>
+      <%= link_to "Already have an account? Log in here.", login_path %>
       <% end %>
 
     </div>

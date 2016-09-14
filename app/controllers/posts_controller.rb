@@ -69,13 +69,13 @@ class PostsController < ApplicationController
   def upvote
     set_post
     @post.upvote_from current_user
-    redirect_to posts_path
+    redirect_to :back
   end
 
 
   private
   def post_params
-   params.require(:post).permit(:title, :text, :image, :location_id, :tag_list)
+   params.require(:post).permit(:title, :text, :image, :location, :tag_list)
   end
 
   def set_post

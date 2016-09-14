@@ -6,16 +6,16 @@
     <div class="callout post-area">
 
       <h4 class="text-center"> <%= link_to "#{post.title}", post_path(post) %></h4>
-      <p class="text-center"><%= post.location_id %></p>
+      <p class="text-center"><%= post.location %></p>
       <img src=" <%= post.image %>" class="thumbnail">
       <p class="body-text"> <%= post.text %></p>
-      <p>
-        <strong>Posted by:</strong> <%= link_to "#{post.user.first_name} #{post.user.last_name}", user_path(current_user) %> on <%= post.created_at%>
-      </p>
       <%= link_to like_post_path([post]), method: :put do %>
       <i class="fi-heart"></i>
       <%= post.get_upvotes.size %>
       <% end %>
+      <p>
+        <strong>Posted by:</strong> <%= link_to "#{post.user.first_name} #{post.user.last_name}", user_path(current_user) %> on <%= post.created_at%>
+      </p>
       <p class="text-center tag">
         <%= post.tag_list %>
       </p>
