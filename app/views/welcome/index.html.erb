@@ -5,7 +5,9 @@
 </div>
 <div class="text-center">
   <h4 class="text-center"> Start your own <strong>travel</strong> blog and begin sharing magnificent photos and the <strong>stories</strong> they tell. </h4>
+  <% if !current_user %>
   <%= link_to "Begin photo blogging today!", signup_path, class:"button large" %>
+  <% end %>
 </div>
   <br>
   <br>
