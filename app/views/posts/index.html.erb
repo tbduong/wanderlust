@@ -1,29 +1,48 @@
 <b><h2 class="text-center"> Global Feed </h2></b>
-<!-- <div style='width: 800px;'>
-  <div id="map" style='width: 700px; height: 300px;'></div>
-</div> -->
+<div class="container-fluid">
+  <div class="row" id="map" style='width:800px; height: 300px;'></div>
+  <script type="text/javascript">
+       handler = Gmaps.build('Google');
+       handler.buildMap({
+       provider: {
+         scrollwheel: false,
+         disableDefaultUI: false
+         // pass in other Google Maps API options here
+       },
+       internal: {
+         id: 'map'
+       }
+     },
+     function(){
+       handler.getMap().setZoom(15);
+       markers = handler.addMarkers(<%=raw @hash.to_json %>);
+     });
+   </script>
+ </div>
 
+<div class="form-field large-9 large-centered">
+  <h4 class="text-center"> Filter through photoblogs:</h4>
 <%= search_form_for @q do |f| %>
 <div class="large-8 large-centered text-center">
-
-
-  <div class="field">
-      <label for="">Filter by Location and Category</label>
-      <%= f.select :location_cont, [
+    <div class="field">
+      <p><%= f.label :location, "Location:" %></p>
+      <%= f.select :location, [
         ["Austria"], ["Australia"], ["Belgium"], ["Brazil"], ["Chile"],["Croatia"],["France"],["Germany"],["Greece"],["Iceland"], ["India"], ["Italy"],["Spain"],["Thailand"], ["Vietnam"],["United Kingdom"],["USA"]
         ] %>
+      <p><%= f.label :tag_list_cont, "By Category:" %></p>
       <%= f.select :tag_list_cont, [["Art"], ["Backpacking"], ["Beach"], ["Camping"], ["City"], ["Food/Dining"],["Landscape"], ["Mountains"],["Museums"], ["Nature"], ["Nightlife"],["Resort"] ] %>
-  </div>
-  <%= f.submit "Filter", class:"button" %>
+      <%= f.submit "Filter", class:"button" %>
+      <%= link_to "Refresh", :back %>
   <% end %>
-  </div>
+</div>
+    </div>
+</div>
+<br>
 
 
 <div class="row small-up-1 medium-up-2 large-up-3">
   <% @search.each do |post|%>
   <div class="column user-feed">
-    <div class="callout post-area">
-
       <h4 class="text-center"> <%= link_to "#{post.title}", post_path(post) %></h4>
       <p class="text-center"><%= post.location %></p>
       <img src=" <%= post.image %>" class="thumbnail">
@@ -38,7 +57,6 @@
       <p class="text-center tag">
         <%= post.tag_list %>
       </p>
-  </div>
 </div>
   <% end %>
 </div>
