@@ -11,8 +11,8 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       session[:user_id] = @user.id
-      flash[:success] = "Welcome to WanderLust! Begin sharing your experiences of the world..."
-      redirect_to posts_path
+      flash[:success] = "Welcome to WanderLust! Add more information for your profile, and don't forget a photo of yourself!... Then you can begin sharing your wonderful experiences of the world..."
+      redirect_to user_path(current_user)
     else
       flash[:error] = @user.errors.full_messages.join(", ")
       redirect_to '/signup'

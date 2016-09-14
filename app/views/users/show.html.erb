@@ -1,4 +1,4 @@
-<div class="profile-area text-center">
+<div class="profile-area text-center large-12">
   <h4><b> <%= @user.first_name %> </b> <%= @user.last_name %> </h4>
 </div>
 <img src=" <%= @user.pf_img %>" class="pf-img">
@@ -6,21 +6,30 @@
 <%= link_to "Edit Profile Info", edit_user_path(@user), class:"button hollow edit" %>
 <div class="row small-up-1 medium-up-2 large-up-3">
   <% current_user.posts.each do |post| %>
-  <div class="column">
+  <div class="column user-feed">
     <br>
-    <div class="callout">
+    <div class="callout post-area">
+
 
       <h4 class="text-center"> <%= link_to "#{post.title}", post_path(post) %> </h4>
       <img src=" <%= post.image %>">
       <p class="body-text"> <%= post.text %></p>
       <p>
         <strong>Posted on:</strong> <%= post.created_at %>
+        <%= link_to like_post_path([post]), method: :put do %>
+        <i class="fi-heart"></i>
+        <%= post.get_upvotes.size %>
+        <% end %>
+      <p class="tag text-center">
+        <%= post.tag_list %>
       </p>
-      <%= link_to like_post_path([post]), method: :put do %>
-      Likes:
-      <%= post.get_upvotes.size %>
-      <% end %>
-    </div>
+      </p>
+      <p>
+        <%= link_to edit_post_path([post]), method: :get do %>
+        <i class="fi-pencil"></i>
+        <% end %>
+      </p>
+  </div>
   </div>
   <% end %>
 </div>

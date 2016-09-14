@@ -5,71 +5,63 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-LOCATIONS = [
-   {
-       city: "Seattle",
-       country: "United States"
-   },
-   {
-       city: "Los Angeles",
-       country: "United States"
-   },
-   {
-       city: "New York",
-       country: "United States"
-   },
-   {
-       city: "Miami",
-       country: "United States"
-   },
-   {
-       city: "Paris",
-       country: "France"
-   },
-   {
-       city: "London",
-       country: "United Kingdom"
-   },
-   {
-       city: "Dublin",
-       country: "Ireland"
-   },
-   {
-       city: "Cancun",
-       country: "Mexico"
-   },
-   {
-       city: "Santiago",
-       country: "Chile"
-   },
-   {
-       city: "Vancouver",
-       country: "Canada"
-   },
-   {
-       city: "Rio de Janiero",
-       country: "Brazil"
-   },
-   {
-       city: "Hawaii",
-       country: "United States"
-   },
-   {
-       city: "Patagonia",
-       country: "Chile"
-   },
-   {
-       city: "Buenos Aires",
-       country: "Argentina"
-   },
-   {
-       city: "Rome",
-       country: "Italy"
-   },
-   {
-       city: "Florence",
-       country: "Italy"
-   }
- ]
 
- p Location.create(LOCATIONS)
+USERS = [
+      { first_name:"Tiffani",
+        last_name: "Duong",
+        email: "tiff@tiff.com",
+        password: "test"
+       },
+       { first_name:"Jon",
+         last_name: "Snow",
+         email: "jon@jon.com",
+         password: "test"
+       },
+       { first_name:"Poop",
+         last_name: "Poop",
+         email: "poop@poop.gov",
+         password: "test"
+       }
+     ]
+
+LOCATIONS = [
+  {
+    city: "Santiago",
+    country: "Chile"
+  },
+  {
+    city: "Venice",
+    country: "Italy"
+  }
+]
+
+POSTS = [
+    {
+      title: "Funnest Trip to Italy Ever.",
+      text: "Venice Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
+      image: "https://www.azamaraclubcruises.com/sites/default/files/heros/venice-italy.jpg",
+      tag_list: "City",
+      location_id: 2,
+      user_id: 2,
+    },
+    {
+      title: "Patagonia Rocks!",
+      text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
+      image: "http://a7004596b03128c36bd2-313eee040a6739ed30827c353f729c6b.r55.cf1.rackcdn.com/143/3/large.jpg",
+      tag_list: "Backpacking",
+      location_id: 1,
+      user_id: 1,
+    },
+    {
+      title: "Venice.",
+      text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
+      image: "http://assets.fodors.com/destinations/54497/gondolas-canal-venice-italy_main.jpg",
+      tag_list: "Museum",
+      location_id: 2,
+      user_id: 3,
+    }
+]
+
+  p User.create(USERS)
+  p Post.create(POSTS)
+  p Location.create(LOCATIONS)

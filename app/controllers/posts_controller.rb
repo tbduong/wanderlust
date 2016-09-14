@@ -1,8 +1,9 @@
 class PostsController < ApplicationController
   def index
-    @q = Post.ransack(params[:q])
-    @search = @q.result(distinct: true)
-    @posts = Post.all.order(:cached_votes_score => :desc)
+    # @posts = Post.all.order(:cached_votes_score => :desc)
+    # @q = Post.ransack(params[:q])
+    # @search = @q.result(distinct: true)
+    @posts = Post.all
     @user = User.find_by_id(params[:id])
   end
 
@@ -75,7 +76,7 @@ class PostsController < ApplicationController
 
   private
   def post_params
-   params.require(:post).permit(:title, :text, :image, :location_id)
+   params.require(:post).permit(:title, :text, :image, :location_id, :tag_list)
   end
 
   def set_post
