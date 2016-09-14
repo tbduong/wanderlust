@@ -15,10 +15,10 @@
       <p class="body-text"> <%= post.text %></p>
       <p>
         <strong>Posted on:</strong> <%= post.created_at %>
+        <%= link_to like_post_path([post]), method: :put do %>
+        <i class="fi-heart"></i>
+        <%= post.get_upvotes.size %>
       </p>
-      <%= link_to like_post_path([post]), method: :put do %>
-      Likes:
-      <%= post.get_upvotes.size %>
       <% end %>
     </div>
   </div>

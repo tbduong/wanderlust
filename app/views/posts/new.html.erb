@@ -1,6 +1,7 @@
-<h1 class="text-center"> Create a new Post </h1>
-
-<div class="large-6 large-centered callout">
+<br>
+<div class="large-7 large-centered">
+  <div class="callout">
+  <h1 class="text-center"> Create a new Post </h1>
   <%= form_for @post do |post| %>
   <div>
     <h3><%= post.text_field :title, placeholder: "Title your adventure...",  class: "form-field"%></h3>
@@ -9,7 +10,10 @@
     <h3><%= post.text_area :text, placeholder: "Share your experience!....",  class: "form-field"%></h3>
   </div>
   <div>
-    <h3> <%= post.select :location_id, @locations.map {|l| l.id} %> </h3>
+    <h3> <%= post.select :location_id, [[1]]%> </h3>
+  </div>
+  <div>
+    <h3><%= post.select :tag_list, [["Art"], ["Backpacking"], ["Beach"], ["City"], ["Food/Dining"],["Mountains"], ["Nature"], ["Nightlife"], ["Resort"] ]%></h3>
   </div>
   <div>
     <h5><%= post.uploadcare_uploader :image, :data => {:images_only => true, :crop => "500x500 minimum", :image_shrink => "500x500", :clearable => true }%>
@@ -17,4 +21,5 @@
   </div>
   <%= post.submit "Create Post", :class => "button signup" %>
   <% end %>
+  </div>
 </div>
