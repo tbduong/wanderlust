@@ -8,6 +8,9 @@
   <% current_user.posts.each do |post| %>
   <div class="column user-feed">
     <br>
+    <div class="callout post-area">
+
+
       <h4 class="text-center"> <%= link_to "#{post.title}", post_path(post) %> </h4>
       <img src=" <%= post.image %>">
       <p class="body-text"> <%= post.text %></p>
@@ -17,7 +20,7 @@
         <i class="fi-heart"></i>
         <%= post.get_upvotes.size %>
         <% end %>
-      <p>
+      <p class="tag text-center">
         <%= post.tag_list %>
       </p>
       </p>
@@ -26,6 +29,7 @@
         <i class="fi-pencil"></i>
         <% end %>
       </p>
+  </div>
   </div>
   <% end %>
 </div>

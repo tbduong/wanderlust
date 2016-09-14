@@ -1,13 +1,10 @@
 class PostsController < ApplicationController
   def index
-    if params[:tag]
-      @posts = Post.tagged_with(params[:tag])
-    end
     # @posts = Post.all.order(:cached_votes_score => :desc)
+    @q = Post.ransack(params[:q])
+    @search = @q.result(distinct: true)
     @posts = Post.all
     @user = User.find_by_id(params[:id])
-    # @q = Post.ransack(params[:q])
-    # @search = @q.result(distinct: true)
   end
 
   def new

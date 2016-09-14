@@ -1,9 +1,15 @@
 <h1 class="text-center"> Global Feed </h1>
-
+ <%= search_form_for @q do |f| %>
+ <div class="field large-8 large-centered text-center">
+   <label for="">Search for specific posts (By location or tag)</label>
+   <%= f.text_field :tag_list %><%= f.submit "Filter", class:"button" %>
+   <% end %>
+ </div>
 <div class="row small-up-1 medium-up-2 large-up-3">
-
-  <% @posts.each do |post|%>
+  <% @search.each do |post|%>
   <div class="column user-feed">
+    <div class="callout post-area">
+
       <h4 class="text-center"> <%= link_to "#{post.title}", post_path(post) %></h4>
       <p class="text-center"><%= post.location_id %></p>
       <img src=" <%= post.image %>" class="thumbnail">
@@ -19,5 +25,6 @@
         <%= post.tag_list %>
       </p>
   </div>
+</div>
   <% end %>
 </div>
