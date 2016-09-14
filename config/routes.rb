@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   post '/login', to: 'sessions#create'
 
   get '/feed', to: 'posts#index', as: 'posts'
+  get '/feed/popular', to: 'posts#popular', as: 'popular_posts'
   get '/posts/new', to: 'posts#new', as: 'new_post'
   post '/feed', to: 'posts#create'
   get 'users/posts/:id', to: 'posts#show', as: 'post'

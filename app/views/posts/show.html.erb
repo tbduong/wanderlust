@@ -14,7 +14,7 @@
     <% end %>
     <p> <%= @post.text %></p>
     <p class="tag text-center">
-      <%= @post.tag_list %>
+      <%= @post.category %>
     </p>
   </div>
   <%= link_to 'Edit Post', edit_post_path(@post), class:'button pull' %>

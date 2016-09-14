@@ -18,14 +18,12 @@
   <script src="//cdn.rawgit.com/mahnunchik/markerclustererplus/master/dist/markerclusterer.min.js"></script>
   <script src='//cdn.rawgit.com/printercu/google-maps-utility-library-v3-read-only/master/infobox/src/infobox_packed.js' type='text/javascript'></script> <!-- only if you need custom infoboxes -->
 <script charset="utf-8" src="//ucarecdn.com/widget/2.10.0/uploadcare/uploadcare.full.min.js"></script>
-
-
 </head>
 
 <body>
-  <div class="title-bar" data-responsive-toggle="mobile menu" data-hide-for="large">
+  <div class="title-bar" data-responsive-toggle="mobile menu" data-hide-for="medium">
     <button class="menu-icon" type="button" data-toggle></button>
-    <div class="title-bar-title">Menu</div>
+    <div class="title-bar-title"></div>
   </div>
   <div class="top-bar">
     <div class="top-bar-left">
@@ -33,12 +31,13 @@
         <li class="menu-text"> <%= link_to "WanderLust", root_path %> </li>
         <% if current_user %>
         <li class="menu-text"> <%= link_to 'Global Feed', posts_path %></li>
+        <li class="menu-text"> <%= link_to 'Popular', popular_posts_path %> </li>
         <li class="menu-text"> <%= link_to '+ New Post', new_post_path %></li>
         <% end %>
       </ul>
     </div>
     <div class="top-bar-right">
-      <ul class="dropdown menu" data-dropdown-menu>
+      <ul class="menu" data-dropdown-menu>
         <% if current_user %>
         <li class="menu-text"><img src=" <%= current_user.pf_img %>" class="pf-thumb" ></li>
         <li class="menu-text">

@@ -1,8 +1,8 @@
 class PostsController < ApplicationController
   def index
+    @posts = Post.all.order(:created_at => :asc)
     @q = Post.ransack(params[:q])
     @search = @q.result(distinct: true)
-    @posts = Post.all.order(:created_at => :asc)
     @user = User.find_by_id(params[:id])
   end
 
@@ -21,7 +21,7 @@ class PostsController < ApplicationController
     @post = Post.new(post_params)
     current_user.posts << @post
     if @post.save
-      flash[:success] = "Awesome! Successfully saved a post"
+      flash[:success] = "Awesome! Successfully saved your post"
       redirect_to posts_path
     else
       flash[:error] = "Could not post your entry."
@@ -80,7 +80,7 @@ class PostsController < ApplicationController
 
   private
   def post_params
-   params.require(:post).permit(:title, :text, :image, :location, :tag_list)
+   params.require(:post).permit(:title, :text, :image, :location, :category)
   end
 
   def set_post
