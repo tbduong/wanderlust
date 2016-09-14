@@ -38,6 +38,12 @@ gem 'ransack', github: 'activerecord-hackery/ransack'
 gem 'acts_as_votable', '~> 0.10.0'
 #foundation icons
 gem 'foundation-icons-sass-rails'
+#googlemaps4Rails
+gem 'gmaps4rails'
+#underscorejs
+gem 'underscore-rails'
+#filterrific
+gem 'filterrific'
 
 # gem 'capistrano-rails', group: :development
 
