@@ -80,7 +80,7 @@ class PostsController < ApplicationController
 
   private
   def post_params
-   params.require(:post).permit(:title, :text, :image, :location, :tag_list)
+   params.require(:post).permit(:title, :text, :image, :location, :category)
   end
 
   def set_post

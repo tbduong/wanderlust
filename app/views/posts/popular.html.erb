@@ -15,7 +15,7 @@
         <strong>Posted by:</strong> <%= link_to "#{post.user.first_name} #{post.user.last_name}", user_path(current_user) %> on <%= post.created_at%>
       </p>
       <p class="text-center tag">
-        <%= post.tag_list %>
+        <%= post.category %>
       </p>
     </div>
     <% end %>
