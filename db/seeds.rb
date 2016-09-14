@@ -56,8 +56,12 @@ POSTS = [
       title: "Venice.",
       text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
       image: "http://assets.fodors.com/destinations/54497/gondolas-canal-venice-italy_main.jpg",
-      tag_list: "Backpacking",
+      tag_list: "Museum",
       location_id: 2,
       user_id: 3,
     }
 ]
+
+  p User.create(USERS)
+  p Post.create(POSTS)
+  p Location.create(LOCATIONS)
