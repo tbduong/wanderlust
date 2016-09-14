@@ -1,9 +1,9 @@
 class PostsController < ApplicationController
   def index
-    @q = Post.ransack(params[:q])
-    @search = @q.result(distinct: true)
     @posts = Post.all.order(:cached_votes_score => :desc)
     @user = User.find_by_id(params[:id])
+    # @q = Post.ransack(params[:q])
+    # @search = @q.result(distinct: true)
   end
 
   def new
