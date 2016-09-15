@@ -2,7 +2,6 @@
 <div class="large-8 large-centered text-center">
   <div class="callout">
     <h2> <%= @post.title %> </h2>
-    <%= @post.location %>
     <p>
       Posted: <%= @post.created_at %> by <%= link_to "#{@post.user.first_name} #{@post.user.last_name}", user_path(current_user) %>
     </p>
@@ -13,6 +12,7 @@
     <%= @post.get_upvotes.size %>
     <% end %>
     <p> <%= @post.text %></p>
+    Where: <%= @post.location %>
     <p class="tag text-center">
       <%= @post.category %>
     </p>

@@ -1,23 +1,28 @@
-<h1> Edit this Post </h1>
-<div class="large-7 callout large-centered">
-<%= form_for @post do |post| %>
-  <div>
-    <h3><%= post.text_field :title, placeholder: "Title your adventure...",  class: "form-field"%></h3>
-  </div>
-  <div>
-    <h3><%= post.text_area :text, placeholder: "Share your experience!....",  class: "form-field"%></h3>
-  </div>
-  <div>
-    <h3><%= post.select :location_id, [[1],[2],[3], [4], [5], [6]] %></h3>
-  </div>
-  <div>
-    <h3><%= post.select :tag_list, [["Art"], ["Backpacking"], ["Beach"], ["City"], ["Food/Dining"],["Mountains"], ["Nature"], ["Nightlife"], ["Resort"] ]%></h3>
-  </div>
-  <div>
-    <h3><%= post.uploadcare_uploader :image, :data => {:images_only => true, :crop => "500x500 minimum", :image_shrink => "500x500", :clearable => true } %>
-    </h3>
-  </div>
+<br>
+<div class="large-7 large-centered text-center">
+  <div class="callout">
+    <h1 class="form-title"> Edit this Post </h1>
+    <%= form_for @post do |post| %>
+    <div>
+      <h3><%= post.text_field :title, placeholder: "Title your adventure...",  class: "form-field"%></h3>
+    </div>
+    <div>
+      <h3><%= post.text_area :text, placeholder: "Share your experience!....",  class: "form-field"%></h3>
+    </div>
+    <div>
+      <h3><%= post.select :location_id, [
+        ["Austria"], ["Australia"], ["Belgium"], ["Brazil"], ["Chile"],["Croatia"],["France"],["Germany"],["Greece"],["Iceland"], ["India"], ["Italy"],["Spain"],["Thailand"], ["Vietnam"],["United Kingdom"],["USA"]
+        ] %></h3>
+    </div>
+    <div>
+      <h3><%= post.select :tag_list, [["Art"], ["Backpacking"], ["Beach"], ["City"], ["Food/Dining"],["Mountains"], ["Nature"], ["Nightlife"], ["Resort"] ]%></h3>
+    </div>
+    <div>
+      <h3><%= post.uploadcare_uploader :image, :data => {:images_only => true, :crop => "500x500 minimum", :image_shrink => "500x500", :clearable => true } %>
+      </h3>
+    </div>
 
-  <%= post.submit "Save Changes", :class => "button signup hollow" %>
-<% end %>
+    <%= post.submit "Save Changes", :class => "button signup hollow" %>
+    <% end %>
+  </div>
 </div>

@@ -10,9 +10,10 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require_tree .
  *= require_self
+ *= require 'masonry/transitions'
  *= require foundation_and_overrides
+ *= require_tree .
  */
  @import 'foundation-icons';
 
@@ -49,9 +50,10 @@ a {
     color: rgba(46, 138, 119, 1);
 }
 
-.post-area {
-    background-color: #f1f1f1;
+html body {
+  background-color: #f1f1f1;
 }
+
 .button {
   background-color: black;
 }

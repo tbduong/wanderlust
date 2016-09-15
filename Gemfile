@@ -42,8 +42,8 @@ gem 'foundation-icons-sass-rails'
 gem 'gmaps4rails'
 #underscorejs
 gem 'underscore-rails'
-#filterrific
-# gem 'filterrific'
+#masonry
+gem 'masonry-rails'
 
 # gem 'capistrano-rails', group: :development
 
