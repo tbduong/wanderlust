@@ -34,12 +34,13 @@
     border:1px
     solid #000;
     position: absolute;
+    background-color: rgba(46, 138, 119, 1);
+    opacity: 0.7;
   }
 
-.edit {
-    margin-left: 45%;
+.fi-burst {
     position: relative;
-    z-index: 1;
+    z-index: 5;
 }
 
 .success {

@@ -10,25 +10,33 @@ USERS = [
       { first_name:"Tiffani",
         last_name: "Duong",
         email: "tiff@tiff.com",
-        password: "test"
+        password: "test",
+        languages:"English, Vietnamese, un poco espanol",
+        bio: "Avid and experienced traveler. I enjoy backpacking, people watching, delicious food searches, and just being engulfed in different rich cultures."
        },
        { first_name:"Jon",
          last_name: "Snow",
          email: "jon@jon.com",
          password: "test",
-         pf_img:"http://img.huffingtonpost.com/asset/scalefit_630_noupscale/56e024e81500002a000b1742.jpeg"
+         pf_img:"http://img.huffingtonpost.com/asset/scalefit_630_noupscale/56e024e81500002a000b1742.jpeg",
+         languages:"English",
+         bio:"I have not had time to venture outside of the wall.... since I've been dead..."
        },
        { first_name:"Poop",
          last_name: "Poop",
          email: "poop@poop.gov",
          password: "test",
-         pf_img:"https://s-media-cache-ak0.pinimg.com/736x/a1/25/bd/a125bd16feccdb45207d1b41e4d69f8f.jpg"
+         pf_img:"https://s-media-cache-ak0.pinimg.com/736x/a1/25/bd/a125bd16feccdb45207d1b41e4d69f8f.jpg",
+         languages:"English, Spanish",
+         bio:"Love to travel, bro. It's like totally awesome sauce. No gnarley biz."
        },
        { first_name:"Peter",
          last_name: "Griffin",
          email: "peter@griffin.com",
          password: "test",
-         pf_img:"https://pbs.twimg.com/profile_images/1119269505/0509071614Peter_Griffin.jpg"
+         pf_img:"https://pbs.twimg.com/profile_images/1119269505/0509071614Peter_Griffin.jpg",
+         languages:"English",
+         bio:"hehehehehehehhehehehehehe. Shaaaataaap Meg!"
        }
      ]
 #
@@ -40,7 +48,7 @@ POSTS = [
       image: "https://www.azamaraclubcruises.com/sites/default/files/heros/venice-italy.jpg",
       category: "City",
       location: "Italy",
-      user_id: 2,
+      user_id: 4,
     },
     {
       title: "Patagonia Rocks!",
@@ -112,6 +120,22 @@ POSTS = [
       image: "http://image.insider-journeys.com/overview/china.jpg",
       category: "Museum",
       location: "China",
+      user_id: 2,
+    },
+    {
+      title: "Eifel Tower",
+      text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco fwfljwfk fwlkfej kjelf lpvf df.",
+      image: "https://cache-graphicslib.viator.com/graphicslib/thumbs360x240/7845/SITours/eiffel-tower-priority-access-ticket-with-host-in-paris-299567.jpg",
+      category: "City",
+      location: "France",
+      user_id: 2,
+    },
+    {
+      title: "Hello, Germany!",
+      text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco fwfljwfk fwlkfej kjelf lpvf df.",
+      image: "http://img.inspiredluxuryescapes.com/assets/Uploads/germant.jpg",
+      category: "City",
+      location: "Germany",
       user_id: 2,
     }
 ]
