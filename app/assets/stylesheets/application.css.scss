@@ -32,6 +32,7 @@ color: rgba(46, 138, 119, 1);}
     a {
         &:hover {
             color: #ffffff !important;
+            background-color: gray !important; 
         }
     }
 }
@@ -39,6 +40,7 @@ color: rgba(46, 138, 119, 1);}
 .button {
   background-color: black !important;
   &:hover {
+      background-color: gray !important;
       color: #ffffff !important;
   }
 }
