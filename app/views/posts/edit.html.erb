@@ -10,12 +10,12 @@
       <h3><%= post.text_area :text, placeholder: "Share your experience!....",  class: "form-field"%></h3>
     </div>
     <div>
-      <h3><%= post.select :location_id, [
+      <h3><%= post.select :location, [
         ["Austria"], ["Australia"], ["Belgium"], ["Brazil"], ["Chile"],["Croatia"],["France"],["Germany"],["Greece"],["Iceland"], ["India"], ["Italy"],["Spain"],["Thailand"], ["Vietnam"],["United Kingdom"],["USA"]
         ], :include_blank => false, :prompt => "Choose a Location" %></h3>
     </div>
     <div>
-      <h3><%= post.select :tag_list, [["Art"], ["Backpacking"], ["Beach"], ["City"], ["Food/Dining"],["Mountains"], ["Nature"], ["Nightlife"], ["Resort"] ], :include_blank => false, :prompt => "Choose a Category"%></h3>
+      <h3><%= post.select :category, [["Art"], ["Backpacking"], ["Beach"], ["City"], ["Food/Dining"],["Mountains"], ["Nature"], ["Nightlife"], ["Resort"] ], :include_blank => false, :prompt => "Choose a Category"%></h3>
     </div>
     <div>
       <h5><%= post.uploadcare_uploader :image, :data => {:images_only => true, :crop => "500x500 minimum", :image_shrink => "500x500", :clearable => true } %>
