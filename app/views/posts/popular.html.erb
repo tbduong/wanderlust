@@ -3,9 +3,9 @@
   <div class="row small-up-1 medium-up-2 large-up-3" id="posts">
     <% @posts.each do |post|%>
     <div class="box user-feed">
+      <img src=" <%= post.image %>" class="thumbnail">
       <h4 class="text-center"> <%= link_to "#{post.title}", post_path(post) %></h4>
       <p class="text-center"><%= post.location %></p>
-      <img src=" <%= post.image %>" class="thumbnail">
       <p class="body-text"> <%= post.text %></p>
       <%= link_to like_post_path([post]), method: :put do %>
       <i class="fi-heart"></i>
