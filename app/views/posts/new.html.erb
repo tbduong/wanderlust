@@ -1,0 +1,30 @@
+<br>
+<div class="small-9 small-centered large-7 large-centered text-center">
+  <div class="callout">
+  <h1 class="form-title"> Create a new Post </h1>
+  <%= form_for @post do |post| %>
+  <div>
+    <h3><%= post.text_field :title, placeholder: "Title your adventure...",  class: "form-field"%></h3>
+  </div>
+  <div>
+    <h3><%= post.text_area :text, placeholder: "Share your experience!....",  class: "form-field"%></h3>
+  </div>
+
+  <div>
+    <h3><%= post.select :location, [
+      ["Austria"], ["Australia"], ["Belgium"], ["Brazil"], ["Chile"],["Croatia"],["France"],["Germany"],["Greece"],["Iceland"], ["India"], ["Italy"],["Spain"],["Thailand"], ["Vietnam"],["United Kingdom"],["USA"]
+      ], :include_blank => false, :prompt => "Filter by Location" %> </h3>
+  </div>
+  <div>
+    <h3><%= post.select :category, [["Art"], ["Backpacking"], ["Beach"], ["Camping"], ["City"], ["Food/Dining"],["Landscape"], ["Mountains"],["Museums"], ["Nature"], ["Nightlife"],["Resort"]],
+      :include_blank => false, :prompt => "Filter by Category"%></h3>
+  </div>
+  <div>
+    <h5><%= post.uploadcare_uploader :image, :data => {:images_only => true, :crop => "500x500 minimum", :image_shrink => "500x500", :clearable => true }%>
+    </h5>
+    <br>
+  </div>
+  <%= post.submit "Create Post", :class => "button signup" %>
+  <% end %>
+  </div>
+</div>

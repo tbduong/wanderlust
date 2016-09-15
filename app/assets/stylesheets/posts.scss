@@ -1,3 +1,33 @@
 // Place all the styles related to the Posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+#posts {
+    margin: 0 auto;
+
+}
+.box {
+    margin:5px;
+    width: 20em;
+}
+
+.box img {
+    width: 100%;
+}
+
+.fi-heart {
+    color: red !important;
+    padding-left: 1em;
+    padding-top: 0;
+    margin-top: 0;
+}
+.form-field {
+    background-color: #f1f1f1;
+    color: rgba(46, 138, 119, 1);
+}
+
+.body-text {
+    font-size: 10px;
+    padding-left: 1em;
+    padding-top: 0;
+    margin-top: 0;
+}

@@ -1,0 +1,60 @@
+<h2 class="text-center"> Global Feed </h2>
+<div class="small-12 small-centered medium-12 medium-centered">
+  <div class="row" id="map" style='width:40em; height:15em;'></div>
+  <script type="text/javascript">
+  handler = Gmaps.build('Google');
+  handler.buildMap({
+    provider: {
+      scrollwheel: false,
+      disableDefaultUI: false
+      // pass in other Google Maps API options here
+    },
+    internal: {
+      id: 'map'
+    }
+  },
+  function(){
+    handler.getMap().setZoom(15);
+    markers = handler.addMarkers(<%=raw @hash.to_json %>);
+  });
+  </script>
+</div>
+
+<div class="form-field small-12 large-9 large-centered">
+  <h4 class="text-center"> Filter Photo Posts:</h4>
+  <%= search_form_for @q do |f| %>
+  <div class="small-12 small-centered large-6 large-centered text-center">
+    <div class="field">
+      <p><%= f.label :location, "Location:" %></p>
+      <%= f.select :location_cont, [
+        ["Austria"], ["Australia"], ["Belgium"], ["Brazil"], ["Chile"],["Croatia"],["France"],["Germany"],["Greece"],["Iceland"], ["India"], ["Italy"],["Spain"],["Thailand"], ["Vietnam"],["United Kingdom"],["USA"]
+        ], :include_blank => true, :prompt => "Filter by Location" %>
+        <p><%= f.label :category, "By Category:"%></p>
+         <%= f.select :category_cont, [["Art"], ["Backpacking"], ["Beach"], ["Camping"], ["City"], ["Food/Dining"],["Landscape"], ["Mountains"],["Museums"], ["Nature"], ["Nightlife"],["Resort"] ], :include_blank => true, :prompt => "Filter by Category" %>
+
+
+        <%= f.submit "Filter", class:"button" %>
+        <%= link_to "Refresh", posts_path %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <br>
+
+  <div class="transitions-enabled small-1 medium-2 large-up-3" id="posts">
+    <% @search.each do |post|%>
+    <div class="box user-feed">
+      <img src=" <%= post.image %>" class="thumbnail">
+      <h5 class="text-center"> <%= link_to "#{post.title}", post_path(post) %></h5>
+      <p class="body-text"> <%= post.text %></p>
+      <%= link_to like_post_path([post]), method: :put do %>
+      <i class="fi-heart"> <%= post.get_upvotes.size %></i>
+      <% end %>
+      <b><p class="body-text">Posted by:</b> <%= link_to "#{post.user.first_name} #{post.user.last_name}", user_path(current_user) %> on <%= post.created_at%></p>
+      <p class="body-text"><b>Where:</b> <%= post.location  %></p>
+      <p class="small-6 small-centered medium-6 medium-centered large-6 large-centered tag text-center">
+        <%= post.category %>
+      </p>
+    </div>
+    <% end %>
+  </div>
