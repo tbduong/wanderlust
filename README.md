@@ -24,7 +24,7 @@ Start your own travel blog and begin sharing magnificent photos and the stories 
 ## ERD, Wireframes, and User Stories
 
 ### ERD:
-![WanderLust WireFrame] (http://i.imgur.com/rQ4QQml.png)
+![WanderLust WireFrame] (http://i.imgur.com/X6JkxsC.png)
 ### Wireframes & User Stories:
 ![WanderLust ERD] (http://i.imgur.com/0Pivj8n.png)
 
