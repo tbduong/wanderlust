@@ -15,12 +15,20 @@ USERS = [
        { first_name:"Jon",
          last_name: "Snow",
          email: "jon@jon.com",
-         password: "test"
+         password: "test",
+         pf_img:"http://img.huffingtonpost.com/asset/scalefit_630_noupscale/56e024e81500002a000b1742.jpeg"
        },
        { first_name:"Poop",
          last_name: "Poop",
          email: "poop@poop.gov",
-         password: "test"
+         password: "test",
+         pf_img:"https://s-media-cache-ak0.pinimg.com/736x/a1/25/bd/a125bd16feccdb45207d1b41e4d69f8f.jpg"
+       },
+       { first_name:"Peter",
+         last_name: "Griffin",
+         email: "peter@griffin.com",
+         password: "test",
+         pf_img:"https://pbs.twimg.com/profile_images/1119269505/0509071614Peter_Griffin.jpg"
        }
      ]
 #
@@ -43,20 +51,68 @@ POSTS = [
       user_id: 1,
     },
     {
-      title: "Venice.",
+      title: "India was awesome! Hehehe",
       text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
-      image: "http://assets.fodors.com/destinations/54497/gondolas-canal-venice-italy_main.jpg",
-      category: "Museum",
-      location: "Italy",
+      image: "https://www.liverpool.ac.uk/media/research/india-fellowship-brochure-image.jpg",
+      category: "City",
+      location: "India",
       user_id: 3,
     },
     {
-      title: "Venice.",
-      text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
-      image: "http://assets.fodors.com/destinations/54497/gondolas-canal-venice-italy_main.jpg",
-      category: "Museum",
-      location: "Italy",
+      title: "Had the best THAI-me",
+      text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco. fkfnlekfelfkejflkfjelfkjelkajgalgkejglekgj gejglekgje lgekjgel gkegjle",
+      image: "http://newmedia.thomson.co.uk/live/vol/0/921d4b57639916341dfa76e38310ff7bc13b11e2/1080x608/web/ASIAFAREASTTHAILANDTHAILANDDES_000423KHAOLAKRES_002378.jpg",
+      category: "Beach",
+      location: "Thailand",
       user_id: 1,
+    },
+    {
+      title: "Port was absolutely breathtaking!",
+      text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
+      image: "http://www.vayaadventures.com/wp-content/uploads/Valpo.jpg",
+      category: "City",
+      location: "Chile",
+      user_id: 2,
+    },
+    {
+      title: "Fantastic!",
+      text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
+      image: "http://www.ultimatechase.com/Chase_Accounts/Images/Rio_De_Janeiro_Trip_2009/Rio_Brazil_2009_132.jpg",
+      category: "City",
+      location: "Brazil",
+      user_id: 4,
+    },
+    {
+      title: "Zion: The Narrows",
+      text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
+      image: "http://images.nationalgeographic.com/wpf/media-live/photos/000/940/overrides/zion-narrows-hike-virgi-river_94017_600x450.jpg",
+      category: "Nature",
+      location: "USA",
+      user_id: 1,
+    },
+    {
+      title: "Half Dome Baby!",
+      text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
+      image: "https://content-oars.netdna-ssl.com/wp-content/uploads/2015/12/Yosemite.Fran_.jpg",
+      category: "Nature",
+      location: "USA",
+      user_id: 1,
+    },
+    {
+      title: "Eifel Tower",
+      text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco fwfljwfk fwlkfej kjelf lpvf df.",
+      image: "http://www.aviewoncities.com/img/paris/kvefr1243s.jpg",
+      category: "City",
+      location: "France",
+      user_id: 1,
+    },
+    {
+      title: "Great Wall was so..... Great. But, not as great as the Wall.",
+      text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamcofefefe",
+      image: "http://image.insider-journeys.com/overview/china.jpg",
+      category: "Museum",
+      location: "China",
+      user_id: 2,
     }
 ]
 #
