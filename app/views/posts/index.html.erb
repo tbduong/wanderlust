@@ -1,6 +1,6 @@
-<b><h2 class="text-center"> Global Feed </h2></b>
-<div class="container-fluid">
-  <div class="row" id="map" style='width:30em; height:25em;'></div>
+<h2 class="text-center"> Global Feed </h2>
+<div class="small-3 medium-12 columns">
+  <div class="row" id="map" style='width:40em; height:15em;'></div>
   <script type="text/javascript">
   handler = Gmaps.build('Google');
   handler.buildMap({
@@ -21,9 +21,9 @@
 </div>
 
 <div class="form-field large-9 large-centered">
-  <h4 class="text-center"> Filter through photoblogs:</h4>
+  <h4 class="text-center"> Filter Photo Posts:</h4>
   <%= search_form_for @q do |f| %>
-  <div class="large-6 large-centered text-center">
+  <div class="small-11 small-centered large-6 large-centered text-center">
     <div class="field">
       <p><%= f.label :location, "Location:" %></p>
       <%= f.select :location_cont, [
@@ -41,7 +41,7 @@
   </div>
   <br>
 
-  <div class="transitions-enabled small-up-1 medium-up-2 large-up-3" id="posts">
+  <div class="transitions-enabled small-1 medium-up-2 large-up-3" id="posts">
     <% @search.each do |post|%>
     <div class="box user-feed">
       <img src=" <%= post.image %>" class="thumbnail">
