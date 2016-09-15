@@ -32,6 +32,9 @@ color: rgba(46, 138, 119, 1);}
         }
     }
 }
+.button {
+  background-color: black !important;
+}
 
 .form-box {
     margin-left: 20%;
@@ -47,16 +50,13 @@ color: rgba(46, 138, 119, 1);}
 }
 
 a {
-    color: rgba(46, 138, 119, 1);
+    color: rgba(46, 138, 119, 1) !important;
 }
 
 html body {
   background-color: #f1f1f1;
 }
 
-.button {
-  background-color: black;
-}
 
 .tag {
     background-color: rgba(46, 138, 119, 1);

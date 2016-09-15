@@ -16,8 +16,18 @@
 
 .fi-heart {
     color: red !important;
+    padding-left: 1em;
+    padding-top: 0;
+    margin-top: 0;
 }
 .form-field {
     background-color: #f1f1f1;
     color: rgba(46, 138, 119, 1);
+}
+
+.body-text {
+    font-size: 10px;
+    padding-left: 1em;
+    padding-top: 0;
+    margin-top: 0;
 }
