@@ -14,6 +14,7 @@ Start your own travel blog and begin sharing magnificent photos and the stories 
 * Ruby on Rails
 * PostgreSQL
 * Foundation
+* HTML/CSS
 * Sass
 
 ##Ruby Gems:
