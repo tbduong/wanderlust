@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160914214311) do
+ActiveRecord::Schema.define(version: 20160915040347) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,7 +27,6 @@ ActiveRecord::Schema.define(version: 20160914214311) do
     t.text     "text"
     t.string   "category"
     t.string   "title"
-    t.integer  "location_id"
     t.integer  "user_id"
     t.datetime "created_at",                            null: false
     t.datetime "updated_at",                            null: false
@@ -46,7 +45,6 @@ ActiveRecord::Schema.define(version: 20160914214311) do
     t.index ["cached_weighted_average"], name: "index_posts_on_cached_weighted_average", using: :btree
     t.index ["cached_weighted_score"], name: "index_posts_on_cached_weighted_score", using: :btree
     t.index ["cached_weighted_total"], name: "index_posts_on_cached_weighted_total", using: :btree
-    t.index ["location_id"], name: "index_posts_on_location_id", using: :btree
     t.index ["user_id"], name: "index_posts_on_user_id", using: :btree
   end
 
@@ -102,6 +100,5 @@ ActiveRecord::Schema.define(version: 20160914214311) do
     t.index ["voter_id", "voter_type", "vote_scope"], name: "index_votes_on_voter_id_and_voter_type_and_vote_scope", using: :btree
   end
 
-  add_foreign_key "posts", "locations"
   add_foreign_key "posts", "users"
 end
