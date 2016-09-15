@@ -21,6 +21,12 @@ Start your own travel blog and begin sharing magnificent photos and the stories 
 * Ransack
 * Acts_As_Votable
 
+##Future Implementations:
+* Google Maps API - Being able to filter posts via markers/pins on map
+* Users will be able to comment on each other's posts
+* Users will be able to follow(bookmark each other) -- go to favorites page
+* 
+
 ## ERD, Wireframes, and User Stories
 
 ### ERD:
