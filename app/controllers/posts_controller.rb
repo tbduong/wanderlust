@@ -38,8 +38,8 @@ class PostsController < ApplicationController
     post_id = params[:id]
     @post = Post.find_by(id: post_id)
     if session[:user_id] != @post.user_id
-      flash[:error] = "You are not allowed to edit this post. It's not yours!"
-      redirect_to '/'
+      flash[:notice] = "You are not allowed to edit this post. It's not yours!"
+      redirect_to posts_path
     end
   end
 

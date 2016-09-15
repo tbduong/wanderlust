@@ -1,7 +1,8 @@
-<div class="profile-area text-center large-12">
-  <h4><b> <%= @user.first_name %> </b> <%= @user.last_name %> </h4>
+<div class="profile-area large-12">
+  <h4 class="text-center "><b> <%= @user.first_name %> </b> <%= @user.last_name %> </h4>
+  <p><b>Bio</b> <%= @user.bio %></p>
+  <p><b>Language(s):</b><%= @user.languages %></p>
 </div>
-<br>
 <div class="small-centered medium-centered">
   <img src=" <%= @user.pf_img %>" class="pf-img">
 <%= link_to edit_user_path([@user]), method: :get do %>
@@ -10,8 +11,6 @@
 </div>
 <br>
 <br>
-<%= @user.languages %>
-<%= @user.bio %>
 <div class="transitions-enabled small-3 small-centered medium-12 medium-centered large-up-3 large-centered" id="posts">
   <% current_user.posts.each do |post| %>
   <div class="box user-feed">
