@@ -9,6 +9,9 @@
   <%= stylesheet_link_tag    "application" %>
   <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <script src="js/vendor/jquery.min.js"></script>
+  <script src="js/foundation.min.js"></script>
+  <script src="js/foundation.util.mediaQuery.js"></script>
   <script>
   UPLOADCARE_LOCALE = "en";
   UPLOADCARE_TABS = "file facebook instagram";
@@ -21,7 +24,7 @@
 </head>
 
 <body>
-  <div class="title-bar" data-responsive-toggle="mobile menu" data-hide-for="medium">
+  <div class="title-bar" data-responsive-toggle="mobile menu" data-hide-for="small" hide-for-medium-up>
     <button class="menu-icon" type="button" data-toggle></button>
     <div class="title-bar-title"></div>
   </div>

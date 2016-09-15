@@ -12,10 +12,13 @@
  *
  *= require_self
  *= require 'masonry/transitions'
+ *= require font-awesome
  *= require foundation_and_overrides
  *= require_tree .
  */
  @import 'foundation-icons';
+ @import 'motion-ui/motion-ui';
+ @import "font-awesome";
 
 .top-bar { background-color: #000000 !important;
           font-size: 14px;}
@@ -28,12 +31,16 @@ color: rgba(46, 138, 119, 1);}
 .top-bar li {
     a {
         &:hover {
-            color: #ffffff;
+            color: #ffffff !important;
         }
     }
 }
+
 .button {
   background-color: black !important;
+  &:hover {
+      color: #ffffff !important;
+  }
 }
 
 .form-box {
@@ -51,6 +58,10 @@ color: rgba(46, 138, 119, 1);}
 
 a {
     color: rgba(46, 138, 119, 1) !important;
+    &:hover {
+        color: #555555 !important;
+    }
+
 }
 
 html body {
