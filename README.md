@@ -1,6 +1,6 @@
-## WanderLust
+# WanderLust
 
-https://wanderlust-blog.herokuapp.com/
+<a href="https://wanderlust-blog.herokuapp.com/"</a>
 
 Start your own travel blog and begin sharing magnificent photos and the stories they tell. Capture life as it happens and share the moments that inspire them with the click of a button. See fellow travelers and their ventures and like their photos to inspire your future travels or just a way for you to get away from that 9-to-5 and immerse yourself in beautiful destinations.
 
@@ -10,16 +10,23 @@ Start your own travel blog and begin sharing magnificent photos and the stories 
 4. You can filter photos by location and category to find the type of travel you are looking for or are interested in.
 5. Have fun and enjoy magnificent traveling stories!
 
-#Technologies Used:
+##Technologies Used:
 * Ruby on Rails
 * PostgreSQL
 * Foundation
 * Sass
 
-#Ruby Gems:
+##Ruby Gems:
 * UploadCare
 * Ransack
 * Acts_As_Votable
+
+## ERD, Wireframes, and User Stories
+
+### ERD:
+![WanderLust WireFrame] (http://i.imgur.com/rQ4QQml.png)
+### Wireframes & User Stories:
+![WanderLust ERD] (http://i.imgur.com/0Pivj8n.png)
 
 
 
