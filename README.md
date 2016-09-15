@@ -1,24 +1,25 @@
-# README
+## WanderLust
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+https://wanderlust-blog.herokuapp.com/
 
-Things you may want to cover:
+Start your own travel blog and begin sharing magnificent photos and the stories they tell. Capture life as it happens and share the moments that inspire them with the click of a button. See fellow travelers and their ventures and like their photos to inspire your future travels or just a way for you to get away from that 9-to-5 and immerse yourself in beautiful destinations.
 
-* Ruby version
+1. Sign Up for an account
+2. Add a profile page, edit bio information and begin shooting!
+3. Check out the Global feed to see all photos posted by all users, and the Popular page to check out the most "Liked" photos.
+4. You can filter photos by location and category to find the type of travel you are looking for or are interested in.
+5. Have fun and enjoy magnificent traveling stories!
 
-* System dependencies
+#Technologies Used:
+* Ruby on Rails
+* PostgreSQL
+* Foundation
+* Sass
 
-* Configuration
+#Ruby Gems:
+* UploadCare
+* Ransack
+* Acts_As_Votable
 
-* Database creation
 
-* Database initialization
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
