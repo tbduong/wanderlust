@@ -1,6 +1,6 @@
 # WanderLust
 
-<a href="https://wanderlust-blog.herokuapp.com/"</a>
+<a href="https://wanderlust-blog.herokuapp.com/">WanderLust</a>
 
 Start your own travel blog and begin sharing magnificent photos and the stories they tell. Capture life as it happens and share the moments that inspire them with the click of a button. See fellow travelers and their ventures and like their photos to inspire your future travels or just a way for you to get away from that 9-to-5 and immerse yourself in beautiful destinations.
 
