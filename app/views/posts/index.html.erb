@@ -1,5 +1,5 @@
 <h2 class="text-center"> Global Feed </h2>
-<div class="small-3 medium-12 columns">
+<div class="small-12 small-centered medium-12 medium-centered">
   <div class="row" id="map" style='width:40em; height:15em;'></div>
   <script type="text/javascript">
   handler = Gmaps.build('Google');
@@ -20,10 +20,10 @@
   </script>
 </div>
 
-<div class="form-field large-9 large-centered">
+<div class="form-field small-12 large-9 large-centered">
   <h4 class="text-center"> Filter Photo Posts:</h4>
   <%= search_form_for @q do |f| %>
-  <div class="small-11 small-centered large-6 large-centered text-center">
+  <div class="small-12 small-centered large-6 large-centered text-center">
     <div class="field">
       <p><%= f.label :location, "Location:" %></p>
       <%= f.select :location_cont, [

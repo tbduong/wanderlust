@@ -44,6 +44,8 @@ gem 'gmaps4rails'
 gem 'underscore-rails'
 #masonry
 gem 'masonry-rails'
+#jquery Turbolinks
+gem 'jquery-turbolinks'
 
 # gem 'capistrano-rails', group: :development
 
