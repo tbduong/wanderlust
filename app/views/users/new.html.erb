@@ -1,25 +1,27 @@
 <br>
 <div class="large-6 large-centered text-center">
-  <div class="callout form-box">
+    <div class="callout form-box">
 
-    <h1 class="form-title"> Sign Up </h1>
-    <%= form_for @user do |user| %>
-    <div>
-      <h3><%= user.text_field :first_name, placeholder: "First Name", class: "form-field"%></h3>
-    </div>
-    <div>
-      <h3><%= user.text_field :last_name, placeholder: "Last Name",  class: "form-field"%></h3>
-    </div>
-    <div>
-      <h3><%= user.text_field :email, placeholder: "Email", class: "form-field" %></h3>
-    </div>
-    <div>
-      <h3><%= user.password_field :password, placeholder: "Password", class: "form-field" %>
-      </div>
-      <%= user.submit "Sign Up", :class => "button" %>
-      <hr>
-      <%= link_to "Already have an account? Log in here.", login_path %>
-      <% end %>
+        <h1 class="form-title">
+            Sign Up
+        </h1>
+        <%= form_for @user do |user| %>
+        <div>
+            <h3><%= user.text_field :first_name, placeholder: "First Name", class: "form-field"%></h3>
+        </div>
+        <div>
+            <h3><%= user.text_field :last_name, placeholder: "Last Name",  class: "form-field"%></h3>
+        </div>
+        <div>
+            <h3><%= user.text_field :email, placeholder: "Email", class: "form-field" %></h3>
+        </div>
+        <div>
+            <h3><%= user.password_field :password, placeholder: "Password", class: "form-field" %>
+            </div>
+            <%= user.submit "Sign Up", :class => "button" %>
+            <hr>
+            <%= link_to "Already have an account? Log in here.", login_path %>
+            <% end %>
 
-    </div>
+        </div>
     </div>

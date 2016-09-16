@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
   def index
     @posts = Post.all.order(:created_at => :asc)
-    @q = Post.ransack(params[:q])
+    @q = Post.ransack(params[:q]) # THANKS JAMES DLC!
     @search = @q.result(distinct: true)
     @user = User.find_by_id(params[:id])
   end
@@ -12,7 +12,7 @@ class PostsController < ApplicationController
   end
 
   def new
-    @locations = Location.all
+    # TODO: BYE BYE! @locations = Location.all
     @post = Post.new
     render :new
   end
@@ -67,6 +67,7 @@ class PostsController < ApplicationController
       redirect_to posts_path
     else
       flash[:error] = "You may only delete your own posts."
+      redirect_to post_path(@post)
     end
   end
 
