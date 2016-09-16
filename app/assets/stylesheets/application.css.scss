@@ -1,76 +1,77 @@
-  /*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_self
- *= require 'masonry/transitions'
- *= require font-awesome
- *= require foundation_and_overrides
- *= require_tree .
- */
- @import 'foundation-icons';
- @import 'motion-ui/motion-ui';
- @import "font-awesome";
+/*
+* This is a manifest file that'll be compiled into application.css, which will include all the files
+* listed below.
+*
+* Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+* or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+*
+* You're free to add application-wide styles to this file and they'll appear at the bottom of the
+* compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+* files in this directory. Styles in this file should be added after the last require_* statement.
+* It is generally better to create a new file per style scope.
+*
+*= require_self
+*= require 'masonry/transitions'
+*= require font-awesome
+*= require foundation_and_overrides
+*= require_tree .
+*/
+@import 'foundation-icons';
+@import 'motion-ui/motion-ui';
+@import "font-awesome";
 
 .top-bar { background-color: #000000 !important;
-          font-size: 14px;}
-.top-bar-left a li ul { background-color: #000000 !important;  }
-.top-bar-right a { background-color: #000000 !important;  }
-.dropdown-menu a li ul { background-color: #000000 !important;}
-.menu-text { background-color: #000000 !important;
-color: rgba(46, 138, 119, 1);}
+  font-size: 14px;}
+  .top-bar-left a li ul { background-color: #000000 !important;  }
+  .top-bar-right a { background-color: #000000 !important;  }
+  .dropdown-menu a li ul { background-color: #000000 !important;}
+  .menu-text { background-color: #000000 !important;
+    color: rgba(46, 138, 119, 1);}
 
-.top-bar li {
-    a {
+    .top-bar li {
+      a {
         &:hover {
-            color: #ffffff !important;
+          color: #ffffff !important;
         }
+      }
     }
-}
 
-.button {
-  background-color: black !important;
-  &:hover {
-      color: #ffffff !important;
-  }
-}
+    .button {
+      background-color: black !important;
+      &:hover {
+        background-color: gray !important;
+        color: #ffffff !important;
+      }
+    }
 
-.form-box {
-    margin-left: 20%;
-}
+    .form-box {
+      margin-left: 20%;
+    }
 
-.form-title {
-    color: rgba(46, 138, 119, 1);
-    font-weight: bold;
-}
+    .form-title {
+      color: rgba(46, 138, 119, 1);
+      font-weight: bold;
+    }
 
-.callout {
-    box-shadow: 1px 1px 1px black;
-}
+    .callout {
+      box-shadow: 1px 1px 1px black;
+    }
 
-a {
-    color: rgba(46, 138, 119, 1) !important;
-    &:hover {
+    a {
+      color: rgba(46, 138, 119, 1) !important;
+      &:hover {
         color: #555555 !important;
+      }
+
     }
 
-}
-
-html body {
-  background-color: #f1f1f1;
-}
+    html body {
+      background-color: #f1f1f1;
+    }
 
 
-.tag {
-    background-color: rgba(46, 138, 119, 1);
-    border-radius: 10px;
-    padding: 1,1,1,1;
-}
+    .tag {
+      background-color: rgba(46, 138, 119, 1);
+      border-radius: 10px;
+      padding: 1,1,1,1;
+    }

@@ -5,9 +5,9 @@
 </div>
 <div class="small-centered medium-centered">
   <img src=" <%= @user.pf_img %>" class="pf-img">
-<%= link_to edit_user_path([@user]), method: :get do %>
-<i class="fi-burst"> Edit Profile Info</i>
-<% end %>
+  <%= link_to edit_user_path([@user]), method: :get do %>
+  <i class="fi-burst"> Edit Profile Info</i>
+  <% end %>
 </div>
 <br>
 <br>
@@ -18,14 +18,13 @@
     <h5 class="text-center"> <%= link_to "#{post.title}", post_path(post) %> </h5>
     <p class="body-text"> <%= post.text %></p>
     <p class="body-text"><b>Posted on:</b> <%= post.created_at %></p>
-      <%= link_to like_post_path([post]), method: :put do %>
-      <i class="fi-heart"></i>
-      <%= post.get_upvotes.size %>
-      <% end %>
-      <p class="tag text-center">
-        <%= post.tag_list %>
-      </p>
-
+    <%= link_to like_post_path([post]), method: :put do %>
+    <i class="fi-heart"></i>
+    <%= post.get_upvotes.size %>
+    <% end %>
+    <p class="tag text-center">
+      <%= post.tag_list %>
+    </p>
     <p>
       <%= link_to edit_post_path([post]), method: :get do %>
       <i class="fi-pencil"></i>
@@ -35,5 +34,5 @@
       <% end %>
     </p>
   </div>
-<% end %>
+  <% end %>
 </div>

@@ -46,8 +46,6 @@ gem 'underscore-rails'
 gem 'masonry-rails'
 #jquery Turbolinks
 gem 'jquery-turbolinks'
-#fontawesome
-gem 'font-awesome-rails', '~> 4.6', '>= 4.6.3.1'
 
 # gem 'capistrano-rails', group: :development
 

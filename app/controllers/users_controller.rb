@@ -21,20 +21,20 @@ class UsersController < ApplicationController
 
   def show
     user_id = params[:id]
-    @user = User.find_by_id(params[:id])
+    set_user
     @post = Post.find_by(id: user_id)
   end
 
   def edit
-    @user = User.find_by_id(params[:id])
+    set_user
     if session[:user_id] != @user[:id]
-      flash[:error] = "You are NOT authorized to edit this profile."
+      flash[:error] = "You are NOT authorized to edit this profile. Please continue browsing!"
       redirect_to '/'
     end
   end
 
   def update
-    @user = User.find_by_id(params[:id])
+    set_user
     if session[:user_id] == @user[:id]
       @user.update(user_params)
       flash[:notice] = "Successfully updated your profile."
@@ -47,6 +47,10 @@ class UsersController < ApplicationController
 
 
   private
+
+  def set_user
+    @user = User.find_by_id(params[:id])
+  end
 
   def user_params
     params.require(:user).permit(:first_name, :last_name, :email, :password, :pf_img, :bio, :languages)
