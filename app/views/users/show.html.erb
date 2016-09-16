@@ -4,6 +4,7 @@
   <p><b>Language(s):</b><%= @user.languages %></p>
 </div>
 <div class="small-centered medium-centered">
+  <!--  TODO: Consider using img_tag -->
   <img src=" <%= @user.pf_img %>" class="pf-img">
 <%= link_to edit_user_path([@user]), method: :get do %>
 <i class="fi-burst"> Edit Profile Info</i>

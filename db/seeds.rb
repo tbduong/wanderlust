@@ -139,6 +139,6 @@ POSTS = [
       user_id: 2,
     }
 ]
-#
+# TODO: delete tables first
   p User.create(USERS)
   p Post.create(POSTS)
