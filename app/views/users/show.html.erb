@@ -3,18 +3,18 @@
   <p><b>Bio</b> <%= @user.bio %></p>
   <p><b>Language(s):</b><%= @user.languages %></p>
 </div>
-<div class="small-centered medium-centered">
   <img src=" <%= @user.pf_img %>" class="pf-img">
   <%= link_to edit_user_path([@user]), method: :get do %>
   <i class="fi-burst"> Edit Profile Info</i>
   <% end %>
-</div>
+
+<h2> </h2>
 <br>
 <br>
 <div class="transitions-enabled small-3 small-centered medium-12 medium-centered large-up-3 large-centered" id="posts">
   <% current_user.posts.each do |post| %>
   <div class="box user-feed">
-    <img src=" <%= post.image %>">
+    <%= image_tag( post.image ) %>
     <h5 class="text-center"> <%= link_to "#{post.title}", post_path(post) %> </h5>
     <p class="body-text"> <%= post.text %></p>
     <p class="body-text"><b>Posted on:</b> <%= post.created_at %></p>
