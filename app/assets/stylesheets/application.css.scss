@@ -12,13 +12,11 @@
 *
 *= require_self
 *= require 'masonry/transitions'
-*= require font-awesome
 *= require foundation_and_overrides
 *= require_tree .
 */
 @import 'foundation-icons';
 @import 'motion-ui/motion-ui';
-@import "font-awesome";
 
 .top-bar { background-color: #000000 !important;
   font-size: 14px;}

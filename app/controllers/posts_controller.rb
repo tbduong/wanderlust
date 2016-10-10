@@ -12,7 +12,6 @@ class PostsController < ApplicationController
   end
 
   def new
-    @locations = Location.all
     @post = Post.new
     render :new
   end
@@ -38,7 +37,7 @@ class PostsController < ApplicationController
     post_id = params[:id]
     @post = Post.find_by(id: post_id)
     if session[:user_id] != @post.user_id
-      flash[:error] = "You are not authorized to edit this post because it is not yours."
+      flash[:error] = "You are not authorized to edit this post. Please continue browsing."
       redirect_to posts_path
     end
   end
@@ -60,7 +59,6 @@ class PostsController < ApplicationController
 
   def destroy
     set_post
-    p @post.inspect
     if session[:user_id] == @post.user_id
       @post.destroy
       flash[:success] = "You have successfully deleted your post."
@@ -70,7 +68,7 @@ class PostsController < ApplicationController
     end
   end
 
-  #upvote_from user
+  #upvote_from user, "like" button
   def upvote
     set_post
     @post.upvote_from current_user
