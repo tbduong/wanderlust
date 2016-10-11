@@ -3,7 +3,7 @@ class User < ApplicationRecord
   has_secure_password
   acts_as_voter
 
-  validates :first_name, :last_name, presence: true, length: {maximum: 30}
+  validates :first_name, :last_name, presence: true, length: {maximum: 50}
 
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
 

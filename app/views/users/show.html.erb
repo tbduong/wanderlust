@@ -1,16 +1,10 @@
-<div class="profile-area large-12">
-  <h4 class="text-center "><b> <%= @user.first_name %> </b> <%= @user.last_name %> </h4>
-  <p><b>Bio</b> <%= @user.bio %></p>
-  <p><b>Language(s):</b><%= @user.languages %></p>
-</div>
-  <img src=" <%= @user.pf_img %>" class="pf-img">
-  <%= link_to edit_user_path([@user]), method: :get do %>
-  <i class="fi-burst"> Edit Profile Info</i>
-  <% end %>
-
-<h2> </h2>
-<br>
-<br>
+<img src=" <%= @user.pf_img %>" class="pf-img">
+  <h3 class="text-center"><b> <%= @user.first_name %> </b> <%= @user.last_name %></h3>
+  <p class="text-center"><b>Bio:</b> <%= @user.bio %></p>
+  <p class="text-center"><b>Language(s):</b><%= @user.languages %></p>
+  <p class="text-center"><%= link_to edit_user_path([@user]), method: :get do %>
+  <i class="fi-burst"> Edit Profile</i></p>
+<% end %>
 <div class="transitions-enabled small-3 small-centered medium-12 medium-centered large-up-3 large-centered" id="posts">
   <% current_user.posts.each do |post| %>
   <div class="box user-feed">
@@ -18,20 +12,22 @@
     <h5 class="text-center"> <%= link_to "#{post.title}", post_path(post) %> </h5>
     <p class="body-text"> <%= post.text %></p>
     <p class="body-text"><b>Posted on:</b> <%= post.created_at %></p>
-    <%= link_to like_post_path([post]), method: :put do %>
-    <i class="fi-heart"></i>
-    <%= post.get_upvotes.size %>
-    <% end %>
-    <p class="tag text-center">
-      <%= post.tag_list %>
+    <p class="icons float-left">
+      <%= link_to like_post_path([post]), method: :put do %>
+      <i class="fi-heart"></i>
+      <%= post.get_upvotes.size %>
+      <% end %>
     </p>
-    <p>
+    <p class= "icons float-right">
       <%= link_to edit_post_path([post]), method: :get do %>
-      <i class="fi-pencil"></i>
+        <i class="fi-pencil"></i>
       <% end %>
       <%= link_to destroy_post_path([post]), method: :delete do %>
-      <i class="fi-trash"></i>
+        <i class="fi-trash"></i>
       <% end %>
+    </p>
+    <p class="small-6 small-centered medium-6 medium-centered large-6 large-centered tag text-center">
+      <%= post.category %>
     </p>
   </div>
   <% end %>
